@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
-const Student = require("./model");
-const errHandler = require("../../helpers/errHandler");
+const Student = require('./model');
+const errHandler = require('../../helpers/errHandler');
 
 const getStudents = (req, res) => {
   return Student.find()
@@ -21,13 +21,13 @@ const addStudent = (req, res) => {
       .then(doc => res.json(doc))
       .catch(errHandler(res));
   }
-  return res.json({ error: "Both email and name fields are required" });
+  return res.json({ error: 'Both email and name fields are required' });
 };
 
 const getByEmail = (req, res) => {
   const { email } = req.query;
   if (!email) {
-    return res.json({ error: "Email field missing from request" });
+    return res.json({ error: 'Email field missing from request' });
   }
   return Student.findOne({ email })
     .then(student => (student ? res.json(student) : res.json({})))
@@ -47,7 +47,7 @@ const greet = (req, res) => {
       })
       .catch(errHandler(res));
   }
-  return res.json({ error: "Both email and name filelds are required" });
+  return res.json({ error: 'Both email and name filelds are required' });
 };
 
 module.exports = {

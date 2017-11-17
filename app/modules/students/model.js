@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const Student = mongoose.model("Student", {
+const Student = mongoose.model('Student', {
   name: {
     type: String,
     minlength: 1,

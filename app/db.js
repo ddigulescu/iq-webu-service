@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const options = {
   useMongoClient: true,
@@ -10,10 +10,10 @@ const options = {
   bufferMaxEntries: 0
 };
 
-mongoose.Promise = require("bluebird");
+mongoose.Promise = require('bluebird');
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost:27017/iqu",
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/iqu',
   options
 );
 

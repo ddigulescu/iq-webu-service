@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
-const db = require("../db");
+const db = require('../db');
 
-const studentsRouter = require("./students/routes");
+const studentsRouter = require('./students/routes');
 
 module.exports = {
   studentsRouter

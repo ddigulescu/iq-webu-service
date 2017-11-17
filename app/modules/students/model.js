@@ -20,4 +20,4 @@ const Student = mongoose.model("Student", {
   }
 });
 
-module.exports = { Student };
+module.exports = Student;
